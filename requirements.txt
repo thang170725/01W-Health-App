@@ -3,3 +3,5 @@ PyMySQL==1.2.0
 python-dotenv==1.2.2
 SQLAlchemy==2.0.51
 typing_extensions==4.16.0
+matplotlib==3.10.8
+matplotlib==3.10.8
