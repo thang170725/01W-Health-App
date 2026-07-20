@@ -34,3 +34,11 @@ def authenticate(username: str, password: str) -> User | None:
             )
         except SQLAlchemyError as exc:
             raise RuntimeError("Could not sign in. Check the database connection.") from exc
+
+
+def get_user(user_id: int) -> User | None:
+    with SessionLocal() as session:
+        try:
+            return session.get(User, user_id)
+        except SQLAlchemyError as exc:
+            raise RuntimeError("Could not load user profile.") from exc
